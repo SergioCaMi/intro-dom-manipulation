@@ -121,12 +121,14 @@
         // 10. Utiliza el método addClass para añdir la clase CSS "fancy-text" a la descripción del producto
 
         document.getElementById("description").classList.add("fancy-text");
+        console.log('Utiliza el método addClass para añdir la clase CSS "fancy-text" a la descripción del producto');
 
         // 5. DIFÍCIL: Aplica un 21% (de incremento) al precio de este producto y muéstralo por consola
 
         let precioIva = document.querySelector(".price").textContent.slice(1)*1.21;
         console.log(precioIva)
         document.querySelector(".price").textContent = `$${precioIva.toFixed(2)}`;
+        console.log("DIFÍCIL: Aplica un 21% (de incremento) al precio de este producto y muéstralo por consola");
     </script>
 
 

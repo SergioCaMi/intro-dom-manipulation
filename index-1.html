@@ -66,35 +66,67 @@
         // Cada ejercicio se resuelve con una línea de código o dos. Puedes modificar el HTML para añadir identificadores, pero intenta resolver los ejercicios sin hacerlo
 
         /* Mostrar información de los nodos DOM */
+     
 
         // 0. Muestra por consola el texto del nodo h2.
 
+        console.log("Muestra por consola el texto del nodo h2:" + document.querySelector('h2').textContent);
+
         // 0b. Muestra por consola el texto del nodo h1
+
+        console.log("Muestra por consola el texto del nodo h1:" + document.querySelector('h1').textContent);
 
         // 1. Muestra por la consola el valor de la propiedad 'src' de la imagen
 
+        console.log("Muestra por la consola el valor de la propiedad 'src' de la imagen: " + document.querySelector("img").getAttribute("src"));
+
         // 2. Muestra por consola la descripción de este artículo
+
+        console.log("Muestra por consola la descripción de este artículo:"+document.getElementById("description").textContent)
 
         // 3. Muestra el precio del producto por consola
 
+        console.log("Muestra el precio del producto por consola:"+ document.querySelector(".price").textContent);
+
         // 3. Muestra el precio del producto por consola sin el símbolo del dólar
 
+        console.log("Muestra el precio del producto por consola sin el símbolo del dólar:"+(document.querySelector(".price").textContent).slice(1));
+
         // 4. COMPLICADO. Muestra por consola el valor del estilo en línea 'width' del tag <img>
+
+        console.log("COMPLICADO. Muestra por consola el valor del estilo en línea 'width' del tag <img>:" + document.querySelector("img").getAttribute("style"));
 
         /* Modificar estilos CSS */
 
         // 6. Cambiar el color del título h2 a verde (green)
 
+        document.querySelector("h2").style.color = "green";
+        console.log("Cambiar el color del título h2 a verde (green)");
+
         // 7. Aumentar el tamaño de fuente del nombre del producto (h1) a 28px
+
+        document.querySelector("h1").style.fontSize = "28px";
+        console.log("Aumentar el tamaño de fuente del nombre del producto (h1) a 28px");
 
         // 8. Cambia el color de la letra del botón "Add To Cart" al color #002147
 
+        document.querySelector("button").style.color = "#002147";
+        console.log("Cambia el color de la letra del botón 'Add To Cart' al color #002147");
+
         // 9. Cambiar el fondo del botón a color mango
+
+        document.querySelector("button").style.backgroundColor = "#FFCD48";
+        console.log("Cambiar el fondo del botón a color mango");
 
         // 10. Utiliza el método addClass para añdir la clase CSS "fancy-text" a la descripción del producto
 
+        document.getElementById("description").classList.add("fancy-text");
+
         // 5. DIFÍCIL: Aplica un 21% (de incremento) al precio de este producto y muéstralo por consola
-    
+
+        let precioIva = document.querySelector(".price").textContent.slice(1)*1.21;
+        console.log(precioIva)
+        document.querySelector(".price").textContent = `$${precioIva.toFixed(2)}`;
     </script>
 
 
